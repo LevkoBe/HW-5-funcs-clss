@@ -23,11 +23,3 @@ class Book {
     console.log(this.isFavorite);
   }
 }
-
-let bookInstance = new Book(
-  "LalaLend",
-  "Brown, Tim del Ray",
-  200,
-  false,
-  false
-);

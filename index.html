@@ -3,18 +3,33 @@
   <head>
     <title>HW-5</title>
     <link rel="stylesheet" href="styles/style.css" />
+    <link rel="stylesheet" href="styles/execution.css" />
   </head>
   <body>
     <main>
       <h1>Table can be added here:</h1>
       <div id="table-div"></div>
-      <input
-        type="text"
-        id="jsCode"
-        placeholder="Enter JavaScript code here"
-        value="createTableCells(3, 5);"
-      />
-      <button id="executeButton">Execute</button>
+
+      <div id="large-execution-container">
+        <div class="execution-container">
+          <input
+            type="text"
+            id="jsCode"
+            class="execute-input"
+            placeholder="Enter JavaScript code here"
+          />
+          <button class="execute-button" id="executeButton">Execute</button>
+        </div>
+        <ul id="suggestions">
+          <li>createTableCells(3, 5);</li>
+          <li>
+            let bookInstance = new Book( "LalaLend", "Brown, Tim del Ray", 200,
+            false, false );
+          </li>
+          <li>console.log(concatenateString("Longer than expected", 5));</li>
+          <li>bookInstance</li>
+        </ul>
+      </div>
       <div id="output"></div>
     </main>
     <script src="scripts\Book.js"></script>

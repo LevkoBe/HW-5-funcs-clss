@@ -1,3 +1,8 @@
+* {
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  padding: 0px;
+}
+
 table {
   border-collapse: collapse;
   width: 50%;

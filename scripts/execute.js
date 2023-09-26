@@ -9,3 +9,21 @@ function executeCode() {
 }
 
 document.getElementById("executeButton").addEventListener("click", executeCode);
+let input = document.getElementById("jsCode");
+let suggestions = document.getElementById("suggestions");
+
+input.addEventListener("focus", () => {
+  suggestions.style.display = "block";
+});
+input.addEventListener("blur", () => {
+  setTimeout(() => {
+    suggestions.style.display = "none";
+  }, 200);
+});
+
+suggestions.addEventListener("click", (e) => {
+  if (e.target.tagName === "LI") {
+    input.value = e.target.textContent;
+    suggestions.style.display = "none";
+  }
+});
