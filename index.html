@@ -7,6 +7,8 @@
     <link rel="stylesheet" href="styles/style.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.css" />
     <link rel="stylesheet" href="styles\table.css" />
+    <link rel="stylesheet" href="styles\tableset.css" />
+    <link rel="stylesheet" href="styles/book.css" />
     <title>HW-5-functions-classes-css...</title>
   </head>
   <body>
@@ -17,15 +19,9 @@
           <div id="book-table">
             <div id="book">
               <form id="bookForm">
-                <label for="titleInput">Title:</label>
-                <input type="text" id="titleInput" required /><br />
-
-                <label for="authorsInput">Authors:</label>
-                <input type="text" id="authorsInput" required /><br />
-
-                <label for="pagesInput">Number of Pages:</label>
-                <input type="number" id="pagesInput" required /><br />
-
+                <input type="text" id="titleInput" placeholder="Title:" style="font-size: 26px" required /><br />
+                <input type="text" id="authorsInput" placeholder="Authors:" style="font-size: 20px" required /><br />
+                <input type="number" id="pagesInput" placeholder="Number of Pages:" style="font-size: 16px" required /><br />
                 <button type="submit">Add the book</button>
               </form>
               <div id="pages"></div>
@@ -65,5 +61,6 @@
     <script src="scripts\Bookshelf.js"></script>
     <script src="scripts/createTable.js"></script>
     <script src="scripts/textures.js"></script>
+    <script src="scripts/Addbook.js"></script>
   </body>
 </html>

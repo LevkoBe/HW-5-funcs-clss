@@ -101,7 +101,6 @@ body {
   border-radius: 20px 0% 0% 20px;
   background-image: url(https://res.cloudinary.com/dbkotg0js/image/upload/v1695756698/web_needs/annie-spratt-im8y4BO2hso-unsplash_vzlwwt.jpg);
   display: flex;
-  align-items: flex-end;
   flex-direction: column;
   justify-content: space-between;
 }
@@ -114,9 +113,6 @@ body {
   border-radius: 20px 0% 0% 20px;
   background-color: antiquewhite;
 }
-#bookForm {
-  margin-top: 20%;
-}
 
 input {
   background-color: transparent;
@@ -125,6 +121,8 @@ input {
 #bookForm {
   text-align: center;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-  color: antiquewhite;
-  font-size: smaller;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding: 8%;
 }

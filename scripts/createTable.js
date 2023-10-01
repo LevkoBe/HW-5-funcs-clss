@@ -1,3 +1,5 @@
+const books = [];
+
 const createTableCells = (rows, columns) => {
   let tableDiv = document.getElementById("table-div");
   tableDiv.innerHTML = "";
@@ -27,6 +29,8 @@ const createTableCells = (rows, columns) => {
   table.appendChild(header);
   table.appendChild(body);
   tableDiv.appendChild(table);
+
+  updateTable(tableDiv, books);
 };
 
 document.getElementById("create-table-button").addEventListener("click", () => {
@@ -34,3 +38,5 @@ document.getElementById("create-table-button").addEventListener("click", () => {
   const columns = parseInt(document.getElementById("columns").value);
   createTableCells(rows, columns);
 });
+
+createTableCells(5, 5);
