@@ -1,37 +1,69 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
-    <title>HW-5</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles/textures.css" />
     <link rel="stylesheet" href="styles/style.css" />
-    <link rel="stylesheet" href="styles/execution.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.css" />
+    <link rel="stylesheet" href="styles\table.css" />
+    <title>HW-5-functions-classes-css...</title>
   </head>
   <body>
-    <main>
-      <h1>Table can be added here:</h1>
-      <div id="table-div"></div>
+    <div class="container">
+      <div class="left">
+        <div class="top">Add book</div>
+        <div class="middle">
+          <div id="book-table">
+            <div id="book">
+              <form id="bookForm">
+                <label for="titleInput">Title:</label>
+                <input type="text" id="titleInput" required /><br />
 
-      <div id="large-execution-container">
-        <div class="execution-container">
-          <input type="text" id="jsCode" class="execute-input" placeholder="Enter JavaScript code here" />
-          <button class="execute-button" id="executeButton">Execute</button>
+                <label for="authorsInput">Authors:</label>
+                <input type="text" id="authorsInput" required /><br />
+
+                <label for="pagesInput">Number of Pages:</label>
+                <input type="number" id="pagesInput" required /><br />
+
+                <button type="submit">Add the book</button>
+              </form>
+              <div id="pages"></div>
+            </div>
+          </div>
         </div>
-        <ul id="suggestions">
-          <li>createTableCells(3, 5);</li>
-          <li>console.log(concatenateString("Longer than expected", 5));</li>
-          <li>let bookInstance = new Book("LalaLend", "Brown, Tim del Ray", 200, false, false);</li>
-          <li>bookInstance;</li>
-          <li>let shelf = new Bookshelf([]);</li>
-          <li>shelf;</li>
-          <li style="color: brown">It's better to copypaste text to console <i class="fa-solid fa-arrow-right"></i></li>
-        </ul>
+        <div class="bottom"></div>
       </div>
-      <div id="output"></div>
-    </main>
+      <div class="right">
+        <div class="top"></div>
+        <div class="middle">
+          <div class="shelf-left">3</div>
+          <div class="table-div" id="table-div"></div>
+          <div class="shelf-right">1</div>
+        </div>
+        <div class="bottom">
+          <div class="shelf-left">4</div>
+          <div class="shelf">
+            <div id="create">
+              <div id="set-table">
+                <form id="tableForm">
+                  <label for="rows">Rows:</label>
+                  <input type="number" id="rows" name="rows" min="1" value="3" />
+                  <label for="columns">Columns:</label>
+                  <input type="number" id="columns" name="columns" min="1" value="5" />
+                  <button type="button" id="create-table-button">Create Table</button>
+                </form>
+              </div>
+            </div>
+          </div>
+          <div class="shelf-right">3</div>
+        </div>
+      </div>
+    </div>
     <script src="scripts\Book.js"></script>
     <script src="scripts/cut.js"></script>
-    <script src="scripts\createTable.js"></script>
-    <script src="scripts/execute.js"></script>
     <script src="scripts\Bookshelf.js"></script>
+    <script src="scripts/createTable.js"></script>
+    <script src="scripts/textures.js"></script>
   </body>
 </html>

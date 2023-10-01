@@ -8,7 +8,7 @@ const createTableCells = (rows, columns) => {
 
   for (let j = 0; j < columns; j++) {
     let tableCell = document.createElement("th");
-    tableCell.textContent = `Column #${j + 1}`;
+    // tableCell.textContent = `Column #${j + 1}`;
     headerRow.appendChild(tableCell);
   }
 
@@ -17,9 +17,9 @@ const createTableCells = (rows, columns) => {
     let tableRow = document.createElement("tr");
     for (let j = 0; j < columns; j++) {
       let tableCell = document.createElement("td");
-      if (j == 0) {
-        tableCell.textContent = `Row #${i + 1}`;
-      } else tableCell.textContent = `Cell #${j + 1}`;
+      // if (j == 0) {
+      //   tableCell.textContent = `Row #${i + 1}`;
+      // } else tableCell.textContent = `Cell #${j + 1}`;
       tableRow.appendChild(tableCell);
     }
     body.appendChild(tableRow);
@@ -28,3 +28,9 @@ const createTableCells = (rows, columns) => {
   table.appendChild(body);
   tableDiv.appendChild(table);
 };
+
+document.getElementById("create-table-button").addEventListener("click", () => {
+  const rows = parseInt(document.getElementById("rows").value);
+  const columns = parseInt(document.getElementById("columns").value);
+  createTableCells(rows, columns);
+});
